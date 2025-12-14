@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="libro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="autor" type="xs:string"/>
+        <xs:element name="fecha">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="publicacion" type="xs:gYear"/>
+              <xs:element name="edicion" type="xs:gYear"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="localizacion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="estanteria" type="xs:string"/>
+              <xs:element name="fila" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
